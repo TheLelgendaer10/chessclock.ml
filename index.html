@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>chessclock by edu</title>
+  	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<form id="form1">
+    <input type="time" value="00:00:00" step="1" id="timeInput" class="timeInput" placeholder="Time of player 1" autocomplete="off">
+    <input type="submit" id="submitInput" class="submitInput"  value="save">
+  	</form>
+
+	<form id="form2">
+	<input type="time" value="00:00:00" step="1" id="timeInput2" class="timeInput" placeholder="Time of player 2" autocomplete="off">
+	<input type="submit" id="submitInput2" class="submitInput" value="save">
+	</form>
+
+	<button id="letsGoBtn" onclick="letsGo()">let's go</button>
+
+	<div id="mainDiv"></div>
+
+	<script src="script.js"></script>
+	
+</body>
+</html> 
