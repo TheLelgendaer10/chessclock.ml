@@ -28,6 +28,23 @@ body {
     font-size: 1.8rem;
     outline: none;
     font-family: 'Montserrat';
+    -webkit-background-color: #f24730;
+    -webkit-border: none;
+    -webkit-color: white;
+    -webkit-padding: 5px 10px;
+    -webkit-text-decoration: none;
+    -webkit-margin: 2px;
+    -webkit-margin-top: 50px;
+    -webkit-cursor: pointer;
+    -webkit-border-radius: 4px;
+    -webkit-padding-top: 12px;
+    -webkit-padding-bottom: 12px;
+    -webkit-padding-right: 20px;
+    -webkit-padding-left: 20px;
+    -webkit-font-size: 1.8rem;
+    -webkit-outline: none;
+    -webkit-font-family: 'Montserrat';
+
 
   }
 
