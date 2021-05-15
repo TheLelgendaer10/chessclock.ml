@@ -2,21 +2,10 @@ var player1Time = 0;
 var player2Time = 0;
 var playerSwitch = true;
 
-document.getElementById("form1").addEventListener("submit", (e) => {
-	e.preventDefault();
-    player1Time = document.getElementById("timeInput").value;
-    document.getElementById("timeInput").disabled = true;
-    console.log(player1Time);
-});
-
-document.getElementById("form2").addEventListener("submit", (e) => {
-	e.preventDefault();
-    player2Time = document.getElementById("timeInput2").value;
-    document.getElementById("timeInput2").disabled = true;
-    console.log(player2Time);
-});
-
 function letsGo() {
+    player2Time = document.getElementById("timeInput2").value;
+    player1Time = document.getElementById("timeInput").value;
+
     document.getElementsByTagName("form")[0].remove();
     document.getElementsByTagName("form")[0].remove();
     document.getElementsByTagName("button")[0].remove();
