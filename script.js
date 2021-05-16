@@ -6,6 +6,16 @@ function letsGo() {
     player2Time = document.getElementById("timeInput2").value;
     player1Time = document.getElementById("timeInput").value;
 
+    if(!player1Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/) || !player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
+        if (!player1Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
+            document.getElementsByClassName("timeInput")[0].classList.add("invalid");
+        }
+        if (!player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
+            document.getElementsByClassName("timeInput")[1].classList.add("invalid");
+        }
+        return
+    } 
+
     document.getElementsByTagName("form")[0].remove();
     document.getElementsByTagName("form")[0].remove();
     document.getElementsByTagName("button")[0].remove();
