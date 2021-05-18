@@ -5,6 +5,8 @@ const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
 var invalidTag1Rendered = false;
 var invalidTag2Rendered = false;
+var form1Invalid = false;
+var form2Invalid = false;
 
 function letsGo() {
     player2Time = document.getElementById("timeInput2").value;
@@ -13,11 +15,17 @@ function letsGo() {
     if (invalidTag1Rendered == true) {
         document.getElementById("invalidTag1").remove();
         invalidTag1Rendered = false;
+
+        document.getElementsByClassName("timeInput")[0].classList.remove("invalid");
+        form1Invalid = false;
     }
 
     if (invalidTag2Rendered == true) {
         document.getElementById("invalidTag2").remove();
         invalidTag2Rendered = false;
+
+        document.getElementsByClassName("timeInput")[1].classList.remove("invalid");
+        form2Invalid = false;
     }
 
     if(!player1Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/) || !player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
@@ -31,7 +39,9 @@ function letsGo() {
             document.getElementById("invalidTag1").innerHTML = "please use this format hh:mm:ss";
 
             invalidTag1Rendered = true;
+            form1Invalid = true;
         }
+        
         if (!player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
             document.getElementsByClassName("timeInput")[1].classList.add("invalid");
 
@@ -42,6 +52,7 @@ function letsGo() {
             document.getElementById("invalidTag2").innerHTML = "please use this format hh:mm:ss";
 
             invalidTag2Rendered = true;
+            form2Invalid = true;
         }
         return
     } 
