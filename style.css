@@ -62,7 +62,19 @@ body {
     margin-top: 14px;
     font-size: 1.2rem;
     border-radius: 8px;
+    animation: downSlide 1s;
+}
 
+@keyframes downSlide {
+    0% {
+        margin-top: 0px;
+        opacity: 0.3;
+    }
+
+    100% {
+        margin-top: 14px;
+        opacity: 1;
+    }
 }
 
 #letsGoBtn {

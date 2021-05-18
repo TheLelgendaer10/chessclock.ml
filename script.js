@@ -3,10 +3,22 @@ var player2Time = 0;
 var playerSwitch = true;
 const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
+var invalidTag1Rendered = false;
+var invalidTag2Rendered = false;
 
 function letsGo() {
     player2Time = document.getElementById("timeInput2").value;
     player1Time = document.getElementById("timeInput").value;
+
+    if (invalidTag1Rendered == true) {
+        document.getElementById("invalidTag1").remove();
+        invalidTag1Rendered = false;
+    }
+
+    if (invalidTag2Rendered == true) {
+        document.getElementById("invalidTag2").remove();
+        invalidTag2Rendered = false;
+    }
 
     if(!player1Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/) || !player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
         if (!player1Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
@@ -16,7 +28,9 @@ function letsGo() {
             invalidTag1.className = "invalidTag";
             invalidTag1.id = "invalidTag1";
             form1.appendChild(invalidTag1);
-            document.getElementById("invalidTag1").innerHTML = "please use this format hh:mm:ss"
+            document.getElementById("invalidTag1").innerHTML = "please use this format hh:mm:ss";
+
+            invalidTag1Rendered = true;
         }
         if (!player2Time.match(/\d\d?:[0-5]?[0-9]:[0-5]?[0-9]/)) {
             document.getElementsByClassName("timeInput")[1].classList.add("invalid");
@@ -25,7 +39,9 @@ function letsGo() {
             invalidTag2.className = "invalidTag";
             invalidTag2.id = "invalidTag2";
             form2.appendChild(invalidTag2);
-            document.getElementById("invalidTag2").innerHTML = "please use this format hh:mm:ss"
+            document.getElementById("invalidTag2").innerHTML = "please use this format hh:mm:ss";
+
+            invalidTag2Rendered = true;
         }
         return
     } 
