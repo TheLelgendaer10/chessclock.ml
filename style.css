@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+:root {
+    --bgColor: #131313;
+    --inputColor: #202020;
+    --coloredColor: #f24730;
+    --coloredColorActive: #eb7565;
+    --coloredCoolorHover: #e92e15;
+    --textColor: #ffff;
+    --switchButtonColorActive: #2e2e2e;
+}
+
 html {
     height: 99%;
 }
 
 body {
-    background-color: #131313;
+    background-color: var(--bgColor);
     font-family: "Montserrat";
     height: 99%;
     overflow: hidden;
@@ -31,10 +41,10 @@ body {
     padding-right: 20px;
     padding-left: 20px;
     font-size: 4rem;
-    background-color: #2b2b2b;
+    background-color: var(--inputColor);
     border: none;
     outline: none;
-    color: white;
+    color: var(--textColor);
     font-family: "Montserrat";
     width: 300px;
     border-radius: 8px;
@@ -56,13 +66,13 @@ body {
 }
 
 .invalidTag {
-    background-color: #2b2b2b;
-    color: white;
+    background-color: var(--inputColor);
+    color: var(--textColor);
     padding: 7px;
     margin-top: 14px;
     font-size: 1.2rem;
     border-radius: 8px;
-    animation: downSlide 1s;
+    animation: downSlide 0.8s;
 }
 
 @keyframes downSlide {
@@ -78,7 +88,7 @@ body {
 }
 
 #letsGoBtn {
-    background-color: #f24730;
+    background-color: var(--coloredColor);
     border: none;
     color: white;
     padding: 5px 10px;
@@ -99,11 +109,11 @@ body {
 }
 
 #letsGoBtn:active {
-    background-color: #eb7565;
+    background-color: var(--coloredColorActive);
 }
 
 #letsGoBtn:hover {
-    background-color: #e92e15;
+    background-color: var(--coloredCoolorHover);
 }
 
 #mainDiv {
@@ -112,7 +122,7 @@ body {
 
 .timerText {
     position: fixed;
-    color: white;
+    color: var(--textColor);
 }
 
 #div1timerText {
@@ -160,7 +170,7 @@ body {
 }
 
 .active {
-    color: #e92e15;
+    color: var(--coloredColor);
     position: fixed;
 }
 
@@ -182,11 +192,11 @@ body {
     }
 
     .timeInput {
-        font-size: 1.6rem;
+        font-size: 3rem;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     #form1 {
         position: relative;
         left: 10px;
@@ -200,17 +210,17 @@ body {
         left: 10px;
         bottom: 10px;
         box-sizing: border-box;
-        font-size: small;
+        width: 10%;
     }
 
     #letsGoBtn {
-        font-size: 1.3rem;
-        top: 85%;
+        font-size: 3rem;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .timeInput {
-        font-size: 1.6rem;
+        font-size: 3rem;
     }
 }
